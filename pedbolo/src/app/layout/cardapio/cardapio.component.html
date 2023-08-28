@@ -1,1 +1,54 @@
-<p>cardapio works!</p>
+<p>
+    <mat-toolbar color="primary" class="justify-content-center">
+      <p *ngIf="isHoraValida" class="titulo">Aberto</p>
+      <p *ngIf="!isHoraValida" class="titulo">Fechado</p>
+    </mat-toolbar>
+  </p>
+  <label for="">Bolos de aniversário</label>
+  <mat-list>
+    <mat-list-item>
+
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>Bolo Sensação</mat-card-title>
+            <mat-card-subtitle>{{valorBolo[0] | currency : 'BRL'}}</mat-card-subtitle>
+            <img mat-card-sm-image src="../../../assets/sensacao.jpg" >
+          </mat-card-title-group>
+        </mat-card-header>
+      </mat-card>
+      
+    </mat-list-item><br>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>Bolo Morango com Nata</mat-card-title>
+            <mat-card-subtitle>{{valorBolo[1] | currency : 'BRL'}}</mat-card-subtitle>
+            <img mat-card-sm-image src="../../../assets/morangonata.jpg" >
+          </mat-card-title-group>
+        </mat-card-header>
+      </mat-card>
+
+    </mat-list-item>
+  </mat-list>
+  <label for="">Bolos simples</label>
+  <mat-list>
+    <mat-list-item>
+
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>Bolo Morango com Nata</mat-card-title>
+            <mat-card-subtitle>{{valorBolo[2] | currency : 'BRL'}}</mat-card-subtitle>
+            <img mat-card-sm-image src="../../../assets/fuba.jpg" >
+          </mat-card-title-group>
+        </mat-card-header>
+      </mat-card>
+
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+
